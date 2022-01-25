@@ -1,1 +1,0 @@
-# wordpress-ha-codepipeline
