@@ -12,11 +12,7 @@ phases:
   pre_build:
     commands:
       - apt update -y
-      - echo Installing source wordpress dependencies.
-      - apt install nginx -y
-      - service nginx start
-      - nginx -t
-      - apt install php php-fpm php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip -y
+      - echo "Wa have updated the server"
       
   build:
     commands:
@@ -26,8 +22,9 @@ phases:
       - sed -i 's/localhost/'$DB_Host'/' wp-config.php
       - echo Build started on `date`
       - echo Compiling the wordpress code
+  
   post_build:
-    commands:
+      commands:
       - echo Build completed on `date`
             
 artifacts:

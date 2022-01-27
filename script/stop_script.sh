@@ -1,6 +1,2 @@
 #!/bin/bash
-isExistApp = `pgrep nginx`
-if [[ -n  $isExistApp ]]; then
-    service nginx stop        
-fi
-
+sudo systemctl stop nginx
